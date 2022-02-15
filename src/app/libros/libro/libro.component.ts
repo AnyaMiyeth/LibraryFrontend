@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Libro } from '../Model/libro';
+import { LibroService } from '../Service/libro.service';
 
 @Component({
   selector: 'app-libro',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LibroComponent implements OnInit {
 
-  constructor() { }
+  filter:string="";
+  libros: Libro[]=[];
+
+  constructor(private libroService: LibroService) { }
 
   ngOnInit(): void {
+
+    this.libroService.get().subscribe(result => {
+      this.libros = result;
+    });
+    
   }
 
 }

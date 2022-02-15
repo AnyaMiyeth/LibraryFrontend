@@ -3,7 +3,7 @@
       <div class="container-fluid">
         <a class="navbar-brand"><b>Consultar Libros</b></a>
         <form class="d-flex">
-          <input [(ngModel)]="searchText" type="text" class="form-control me-3"  name="searchText" placeholder="filtre por autor, libro o año">
+          <input [(ngModel)]="filter" type="text" class="form-control me-3"  name="filter" placeholder="filtre por autor, libro o año">
           <button class="btn btn-outline-success" type="submit"  >Buscar</button>
         </form>
       </div>
@@ -25,7 +25,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let libro of libros|filtroLibros:searchText; index as i ">
+        <tr *ngFor="let libro of libros|filtroLibros:filter; index as i ">
           <th scope="row">{{ i + 1 }}</th>
           <td>{{ libro.titulo }} </td>
           <td>{{ libro.anio }}</td>
