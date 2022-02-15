@@ -12,7 +12,7 @@
     <hr />
     
     
-    <table class="table table-striped table-hover" *ngIf='libros && libros.length'>
+    <table class="table table-hover" *ngIf='libros && libros.length'>
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -25,12 +25,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let libro of libros|filtroLibros:filter; index as i ">
+        <tr *ngFor="let libro of libros|filtrarLibros:filter; index as i ">
           <th scope="row">{{ i + 1 }}</th>
-          <td>{{ libro.titulo }} </td>
-          <td>{{ libro.anio }}</td>
-          <td>{{ libro.genero  }}</td>
-          <td >{{ libro.numeroPaginas  }}</td>
+          <td>{{ libro.title}} </td>
+          <td>{{ libro.year}}</td>
+          <td>{{ libro.genres }}</td>
+          <td>{{ libro.numberOfPages  }}</td>
           <td>{{ libro.autor  }}</td>
           <td>{{ libro.editorial  }}</td>
         </tr>

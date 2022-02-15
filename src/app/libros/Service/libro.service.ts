@@ -17,7 +17,7 @@ export class LibroService {
   }
 
   get(): Observable<Libro[]> {
-    return this.http.get<Libro[]>(this.baseUrl + 'Libro')
+    return this.http.get<Libro[]>(this.baseUrl + 'Book')
         .pipe(
             tap(_ => console.log('datos enviados')),
             catchError(this.handleError<any>('Consulta de Libros', []))
