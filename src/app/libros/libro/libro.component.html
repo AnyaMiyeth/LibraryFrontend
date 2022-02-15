@@ -1,14 +1,13 @@
 <div class="container">
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar ">
       <div class="container-fluid">
-        <a class="navbar-brand"><b>Consultar Libros</b></a>
-        <form class="d-flex">
-          <input [(ngModel)]="filter" type="text" class="form-control me-3"  name="filter" placeholder="filtre por autor, libro o año">
-          <button class="btn btn-outline-success" type="submit"  >Buscar</button>
-        </form>
-      </div>
+        <span class="navbar-brand"><b>Consultar Libros</b></span>
+       </div>
+    
     </nav>
-
+    <div class="center col-5">
+        <input [(ngModel)]="filter" type="text" class="form-control"  name="filter" placeholder="filtre por autor, libro o año">
+    </div>
     <hr />
     
     
